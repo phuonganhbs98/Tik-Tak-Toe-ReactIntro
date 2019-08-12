@@ -1,6 +1,7 @@
 ## Getting started:<br>
 
-Terminal: ***npm start***<br>
+Terminal: >  ***npm install***<br>
+          >  ***npm start***<br>
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
