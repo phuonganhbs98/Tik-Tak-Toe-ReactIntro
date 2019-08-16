@@ -1,6 +1,7 @@
 body {
   font: 14px "Century Gothic", Futura, sans-serif;
-  margin: 20px;
+  margin: 0px;
+  color: #fff;
 }
 
 ol, ul {
@@ -16,35 +17,108 @@ ol, ul {
 .status {
   margin-bottom: 10px;
 }
+.main{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: -webkit-fill-available;
+  background: url('bg4.jpg') no-repeat;
+  background-size: 100% 100%;
+  opacity: 0.8;
+}
 
 .square {
-  background: #fff;
-  border: 1px solid #999;
+  background: inherit;
+  border: 1px solid #000;
   float: left;
   font-size: 24px;
   font-weight: bold;
-  line-height: 34px;
-  height: 34px;
-  margin-right: -1px;
-  margin-top: -1px;
+  line-height: 30px;
+  height: 30px;
   padding: 0;
   text-align: center;
-  width: 34px;
+  width: 30px;
 }
-
+.column{
+  padding: 0px !important;
+  width: 30px;
+}
+.row{
+  width: 95%;
+}
 .square:focus {
   outline: none;
 }
 
 .kbd-navigation .square:focus {
-  background: #ddd;
+  background: inherit;
 }
 
 .game {
-  display: flex;
-  flex-direction: row;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  bottom: 10px;
+  z-index: 1;
 }
 
 .game-info {
-  margin-left: 20px;
+  margin-left: 5px;
+}
+
+p{
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  font-size: 30px;
+  font-weight: bold;
+}
+.won{
+  animation: move1 3s 2 alternate forwards, move2 2s infinite alternate;
+}
+@keyframes move1{
+  from{
+    top: 0%;
+    left: 0%;
+    background: inherit;
+    color: #fff;
+  }
+  to{
+    top: 25%;
+    left: -150%;
+    background: #fff url('win3.jpg') no-repeat; 
+    background-size: cover;
+    font-size: 70px;
+    padding: 100px 180px;
+    border-radius: 30px;
+  }
+}
+@keyframes move2{
+  25%{color: #fff}
+  50%{color: #F781F3}
+  75%{color: #BF00FF}
+  100%{color: #642EFE}
+}
+.selected-cell{
+  padding-top: 50px;
+  font-weight: bold;
+}
+.button-block{
+  width: 50%;
+}
+.button{
+  width: 100%;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 5px;
+  color: #BF00FF;
+  font-size: 18px;
+  font-weight: bold;
+  border: hidden;
+  margin-top: 10px;
+}
+button:hover{
+  color: #8904B1;
 }
